@@ -1,0 +1,25 @@
+ CREATE TABLE STUDENT (
+  ID INTEGER PRIMARY KEY AUTOINCREMENT,
+  NAME TEXT NOT NULL,
+  AGE INTEGER NOT NULL,
+  ADDRESS TEXT
+ );
+
+ INSERT INTO STUDENT (NAME, AGE, ADDRESS) VALUES
+ ('Ram', 18, 'Delhi'),
+ ('Shyam', 19, 'Noida'),
+ ('Sujit', 20, 'Delhi'),
+ ('Ramesh', 18, 'Mumbai'),
+ ('Vikram', 20, 'Bangalore'),
+ ('Ram', 22, 'Kolkata'),
+ ('Sujit', 18, 'Chennai');
+
+ SELECT * FROM STUDENT WHERE AGE = 18 AND ADDRESS = 'Delhi';
+
+ SELECT * FROM STUDENT WHERE NAME = 'Ram' AND AGE = 18;
+
+ SELECT * FROM STUDENT WHERE NAME = 'Ram' OR NAME = 'Sujit';
+
+ SELECT * FROM STUDENT WHERE NAME = 'Ram' OR AGE = 20;
+
+ SELECT * FROM STUDENT WHERE AGE = 18 AND (NAME = 'Ram' OR NAME = 'Ramesh');
